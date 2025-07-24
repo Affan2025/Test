@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact - SA Global</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #e6ebf4;
+    margin: 0; padding: 0;
+    color: #2f3e6b;
+  }
+  a {
+    color: #0a1e6e;
+    text-decoration: none;
+  }
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 40px;
+    background: #f7f9fc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  header .logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1a3a75;
+  }
+  nav {
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 15px;
+    color: #2f3e6b;
+    padding: 6px 0;
+  }
+  nav a.active {
+    font-weight: 700;
+    color: #1a3a75;
+    border-bottom: 2px solid #1a3a75;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 40px auto 80px auto;
+    padding: 0 20px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+
+  /* Layout for offices + form */
+  .container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .offices {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .office-card {
+    background: #f7f9fc;
+    padding: 15px 20px 20px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgb(26 75 179 / 0.1);
+  }
+  .office-card h3 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 17px;
+  }
+  .office-card p {
+    font-size: 13.5px;
+    margin: 5px 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .office-card p i {
+    font-style: normal;
+    color: #1a3a75;
+    font-weight: 700;
+  }
+
+  /* Map container with rounded corners and clipping */
+  .map-wrapper {
+    margin-top: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgb(26 75 179 / 0.12);
+  }
+  .map-wrapper iframe {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 180px;
+  }
+
+  /* Contact form */
+  .contact-form {
+    background: #fff;
+    flex-basis: 400px;
+    border-radius: 12px;
+    padding: 30px 25px;
+    box-shadow: 0 3px 12px rgb(26 75 179 / 0.12);
+  }
+  .contact-form h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 22px;
+    color: #1a3a75;
+    margin-bottom: 8px;
+  }
+  .contact-form p {
+    font-size: 13.5px;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .contact-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2f3e6b;
+  }
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 13.5px;
+    border-radius: 8px;
+    border: 1px solid #ccd7e0;
+    margin-bottom: 16px;
+    font-family: inherit;
+    resize: vertical;
+  }
+  .contact-form textarea {
+    min-height: 80px;
+  }
+  .contact-form .two-columns {
+    display: flex;
+    gap: 15px;
+  }
+  .contact-form .two-columns input {
+    flex: 1;
+  }
+  .contact-form button {
+    background-color: #0c204e;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .contact-form button:hover {
+    background-color: #132d88;
+  }
+
+  /* Icons with unicode */
+  .icon-location::before {
+    content: "\1F4CD";
+    margin-right: 6px;
+    color: #1a3a75;
+  }
+  .icon-phone::before {
+    content: "\260E";
+    margin-right: 6px;
+    color: #1a3a75;
+  }
+
+  /* Responsive for smaller screens */
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+    .contact-form {
+      flex-basis: auto;
+      margin-top: 30px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="circle-logo">SA</div>
+      <span><strong>Global</strong></span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+<main>
+  <h1>Contact Us</h1>
+  <div class="container">
+
+    <div class="offices">
+
+      <div class="office-card">
+        <h3>Dubai Office</h3>
+        <p class="icon-location">Premises number, HD18B First Floor<br>In5 Tech Dubai Internet City</p>
+        <p class="icon-phone">00971545005947</p>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.468052412595!2d55.23937251500592!3d25.09194708392042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d618f45e425%3A0x5989b6c11f764fbd!2sDubai%20Internet%20City!5e0!3m2!1sen!2sae!4v1689456789012!5m2!1sen!2sae" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="office-card">
+        <h3>London Office</h3>
+        <p class="icon-location">23 Eastern Road<br>Romford, London</p>
+        <p class="icon-phone">00447888395646</p>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.175919676936!2d0.20940471574250488!3d51.56908887963713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8bde610621763%3A0x8f61038c9ce4e9f2!2sSchimitar%20House%2C%2023%20Eastern%20Rd%2C%20Romford%20RM1%203PJ%2C%20UK!5e0!3m2!1sen!2sus!4v1690245845000!5m2!1sen!2sus"
+" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <form class="contact-form" action="https://formsubmit.co/445ff756d192962f7a127008cfc9504a" method="POST">
+      <h2>Get in Touch</h2>
+      <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+      <div class="two-columns">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+      </div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</main>
+
+</body>
+</html>
+
